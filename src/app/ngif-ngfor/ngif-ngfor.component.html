@@ -1,0 +1,33 @@
+<p>ngif-ngfor funcionando!!!</p>
+
+<h1 *ngIf="numero > 1">O número é maior que 0</h1>
+
+<input type="text" (input)="numero = $event.target.value">
+
+<h1 *ngIf="numero > 100">O numero é maior que cem</h1>
+
+<br>
+<br>
+
+<hr>
+
+<h1 *ngFor="let n of vetorNumeros">{{n}}</h1>
+
+<br>
+<br>
+
+<hr>
+
+<div *ngFor="let n of vetorNumeros">
+  <h1 *ngIf="n===3">{{n}}</h1>
+</div>
+
+<br>
+<br>
+
+
+<hr>
+
+<div *ngFor="let nome of Nomes">
+  <h1 *ngIf="nome !== 'homer'">{{nome}}</h1>
+</div>
